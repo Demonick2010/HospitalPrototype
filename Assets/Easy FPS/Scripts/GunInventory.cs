@@ -137,6 +137,8 @@ public class GunInventory : MonoBehaviour {
 
 				GameObject resource = (GameObject) Resources.Load(gunsIHave[_redniBroj].ToString());
 				currentGun = (GameObject) Instantiate(resource, transform.position, /*gameObject.transform.rotation*/Quaternion.identity);
+				// TODO: Init The bullets
+
 				AssignHandsAnimator(currentGun);
 			}
 			else if(currentGun.name.Contains("Sword")){

@@ -2274,9 +2274,9 @@ MonoBehaviour:
   mls: {fileID: 0}
   walkingSpeed: 3
   runningSpeed: 5
-  bulletsIHave: 9999
-  bulletsInTheGun: 80
-  amountOfBulletsPerLoad: 80
+  bulletsIHave: 99
+  bulletsInTheGun: 20
+  amountOfBulletsPerLoad: 20
   currentGunPosition: {x: 0, y: 0, z: 0}
   restPlacePosition: {x: -0.07, y: -0.06, z: 0.42}
   aimPlacePosition: {x: 0, y: -0.03, z: 0.3}
