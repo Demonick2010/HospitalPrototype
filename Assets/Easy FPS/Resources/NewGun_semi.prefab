@@ -1149,7 +1149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a804723bdccf04fca985e160ab5f88d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStyle: 0
+  currentStyle: 1
   mls: {fileID: 0}
   walkingSpeed: 3
   runningSpeed: 5
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   forwardRotationAmount: {x: 1, y: 1}
   bulletSpawnPlace: {fileID: 0}
   bullet: {fileID: 128836, guid: c9e619a669d974fd28b5c89e43f2bce2, type: 3}
-  roundsPerSecond: 100
+  roundsPerSecond: 10
   recoilAmount_z: 0.04
   recoilAmount_x: 0.04
   recoilAmount_y: 0.04

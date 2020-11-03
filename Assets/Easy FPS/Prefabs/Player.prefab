@@ -382,14 +382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGun: {fileID: 0}
   gunsIHave:
-  - NewGun_semi
-  - NewGun_auto
-  icons: []
-  switchWeaponCooldown: 0
-  menuStyle: 0
-  spacing: 10
-  beginPosition: {x: 40, y: 4}
-  size: {x: 10, y: 12}
+  - {fileID: 142272, guid: 52d7c5ee3e0cf43d9b5aab3e5df17e7d, type: 3}
   weaponChanging: {fileID: 82784591334345954}
 --- !u!1 &196378
 GameObject:

@@ -8,6 +8,8 @@ TagManager:
   - BulletSpawn
   - ArenaDoor
   - Door
+  - Weapon
+  - LevelPart
   layers:
   - Default
   - TransparentFX
