@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64346551896566378}
   m_Layer: 0
   m_Name: P_Med_box_01
-  m_TagString: Untagged
+  m_TagString: LevelPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 65
