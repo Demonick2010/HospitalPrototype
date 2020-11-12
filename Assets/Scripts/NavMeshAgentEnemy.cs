@@ -8,6 +8,9 @@ public class NavMeshAgentEnemy : MonoBehaviour
     Camera _target; // <-- Player position
     NavMeshAgent _agent; // <-- Get nawMesh Agent component
 
+    [SerializeField]
+    float HP = 100; // <-- Enemy HP (100 by default)
+
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -26,6 +29,29 @@ public class NavMeshAgentEnemy : MonoBehaviour
 
     void Update()
     {
-        _agent.SetDestination(_target.transform.position);
+        _agent.SetDestination(_target.transform.position); // <-- Assigning a destination point
+
+        // Check distance between player and enemy
+        if (Vector3.Distance(_agent.transform.position, _target.transform.position) < 0.5f)
+        {
+            
+            // TODO: Fight logic
+        }
     }
+
+    // Create take damage method
+    void TakeDamage(float _damage)
+    {
+        HP -= _damage;
+
+        print($"Zombie {gameObject.name} take {_damage}. Current lives is {HP}");
+
+        // TODO: Die enemy logic
+        if (HP <= 0)
+        {
+            // Start DIE Courutine
+        }
+    }
+
+    // TODO: DIE Courutine
 }

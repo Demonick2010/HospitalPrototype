@@ -10,6 +10,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField]
     int spawnCount = 10;
 
+    [SerializeField]
+    float timeBetweenNextSpawn = 2f;
+
     GameObject[] SpawnPoints;
 
     // Start is called before the first frame update
@@ -24,15 +27,14 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnCount; i++)
         {
-            var spawnPoint = Random.Range(0, SpawnPoints.Length);
+            var spawnPoint = Random.Range(0, SpawnPoints.Length); // <-- Get a random number
 
-            Instantiate(EnemyPrefab, SpawnPoints[spawnPoint].transform.position, Quaternion.identity);
+            Instantiate(EnemyPrefab, SpawnPoints[spawnPoint].transform.position, Quaternion.identity); // <-- Instantiate enemy
 
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(timeBetweenNextSpawn); // <-- Wait 2 seconds and continue the cycle
         }
 
-        // when the loop ends, multiply the counter by 2
-        spawnCount *= 2;
+        spawnCount *= 2; // <-- when the loop ends, multiply the counter by 2
     }
 
     // Create start courutine public method for another scripts

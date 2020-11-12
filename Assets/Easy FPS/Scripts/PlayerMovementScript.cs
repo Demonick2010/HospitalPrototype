@@ -225,11 +225,8 @@ public class PlayerMovementScript : MonoBehaviour {
 
 
 	public bool been_to_meele_anim = false;
-	private void RaycastForMeleeAttacks(){
-
-
-
-
+	private void RaycastForMeleeAttacks()
+	{
 		if (meleeAttack_cooldown > -5) {
 			meleeAttack_cooldown -= 1 * Time.deltaTime;
 		}
@@ -285,13 +282,16 @@ public class PlayerMovementScript : MonoBehaviour {
 		if (Physics.Raycast (ray1, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray2, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray3, out hitInfo, 2f, ~ignoreLayer)
 			|| Physics.Raycast (ray4, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray5, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray6, out hitInfo, 2f, ~ignoreLayer)
 			|| Physics.Raycast (ray7, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray8, out hitInfo, 2f, ~ignoreLayer) || Physics.Raycast (ray9, out hitInfo, 2f, ~ignoreLayer)) {
-			//Debug.DrawRay (bulletSpawn.position, bulletSpawn.forward + (bulletSpawn.right*0.2f), Color.green, 0.0f);
-			if (hitInfo.transform.tag=="Dummie") {
+			
+			if (hitInfo.transform.tag=="Enemy") {
 				Transform _other = hitInfo.transform.root.transform;
-				if (_other.transform.tag == "Dummie") {
-					print ("hit a dummie");
+				if (_other.transform.tag == "Enemy") {
+					print ("hit a Enemy");
 				}
 				InstantiateBlood(hitInfo,false);
+
+				// Send damage to navmeshenemy script
+				hitInfo.transform.SendMessage("TakeDamage", Random.Range(1f, 6f), SendMessageOptions.DontRequireReceiver);
 			}
 		}
 		yield return new WaitForEndOfFrame ();

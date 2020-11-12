@@ -28,8 +28,9 @@ public class BulletScript : MonoBehaviour {
 					Instantiate(decalHitWall, hit.point + hit.normal * floatInfrontOfWall, Quaternion.LookRotation(hit.normal));
 					Destroy(gameObject);
 				}
-				if(hit.transform.tag == "Dummie"){
+				if(hit.transform.tag == "Enemy"){
 					Instantiate(bloodEffect, hit.point, Quaternion.LookRotation(hit.normal));
+					hit.transform.SendMessage("TakeDamage", Random.Range(5f, 15f), SendMessageOptions.DontRequireReceiver);
 					Destroy(gameObject);
 				}
 			}		
