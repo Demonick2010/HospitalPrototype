@@ -37,6 +37,7 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< HEAD
     "com.unity.probuilder": {
       "version": "4.4.0",
       "depth": 0,
@@ -98,6 +99,8 @@
       },
       "url": "https://packages.unity.com"
     },
+=======
+>>>>>>> 44348d266b4121b1de03f721cc8b1f6fbdc866a7
     "com.unity.test-framework": {
       "version": "1.1.18",
       "depth": 0,
